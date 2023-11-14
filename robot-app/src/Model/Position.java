@@ -2,13 +2,16 @@ package Model;
 
 public class Position {
     private int x;
+    private int y;
+
     public int getX() {
         return x;
     }
+
     public void setX(int x) {
         this.x = x;
     }
-    private int y;
+
     public int getY() {
         return y;
     }
