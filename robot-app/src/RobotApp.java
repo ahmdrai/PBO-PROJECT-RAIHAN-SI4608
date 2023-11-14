@@ -36,28 +36,30 @@ public class RobotApp {
             draw();
             instruction = waitInstruction();
 
-            char direction = instruction.charAt(0);
-            int amount = Integer.parseInt(instruction.substring(1));
-            Position p = robot.getPosition();
+            if (!instruction.equals("x")) {
+                char direction = instruction.charAt(0);
+                int amount = Integer.parseInt(instruction.substring(1));
+                Position p = robot.getPosition();
 
-            switch (direction) {
-                case 'w':
-                    p.setY(p.getY() - amount);
-                    break;
-                case 'a':
-                    p.setX(p.getX() - amount);
-                    break;
-                case 's':
-                    p.setY(p.getY() + amount);
-                    break;
-                case 'd':
-                    p.setX(p.getX() + amount);
-                    break;
-                default:
-                    break;
+                switch (direction) {
+                    case 'w':
+                        p.setY(p.getY() - amount);
+                        break;
+                    case 'a':
+                        p.setX(p.getX() - amount);
+                        break;
+                    case 's':
+                        p.setY(p.getY() + amount);
+                        break;
+                    case 'd':
+                        p.setX(p.getX() + amount);
+                        break;
+                    default:
+                        break;
+                }
+
+                robot.setPosition(p);
             }
-
-            robot.setPosition(p);
         } while (!instruction.equals("x"));
 
         System.out.println("-------- Permainan Selesai --------");
