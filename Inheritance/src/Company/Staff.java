@@ -2,7 +2,6 @@ package Company;
 
 public class Staff extends Employee {
     
-    public String divisi;
     public String jobInDivison;
     
     @Override

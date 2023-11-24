@@ -1,8 +1,6 @@
 package Company;
 
 public class Manajer extends Employee {
-    
-    public String divisi;
 
     @Override
     public void sop() {
