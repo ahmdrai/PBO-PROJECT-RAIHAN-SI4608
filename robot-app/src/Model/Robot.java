@@ -2,11 +2,11 @@ package Model;
 
 public class Robot {
     private char icon;
+    private Position position;
+
     public char getIcon() {
         return icon;
     }
-
-    private Position position;
 
     public Position getPosition() {
         return position;
